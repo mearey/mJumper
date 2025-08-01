@@ -1,0 +1,11 @@
+scr_sprite_dissolve(obj_dissolve_controller.dir,
+obj_dissolve_controller.dissolve_speed,
+obj_dissolve_controller.chunk_size,
+obj_dissolve_controller.shrink,
+obj_dissolve_controller.shrink_amt,
+obj_dissolve_controller.grav,
+obj_dissolve_controller.fade,
+obj_dissolve_controller.fade_amt,
+obj_dissolve_controller.spin,
+obj_dissolve_controller.life);
+

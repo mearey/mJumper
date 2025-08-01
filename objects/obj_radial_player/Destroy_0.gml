@@ -1,0 +1,11 @@
+scr_sprite_radial(obj_radial_controller.invert,
+obj_radial_controller.dissolve_speed,
+obj_radial_controller.chunk_size,
+obj_radial_controller.shrink,
+obj_radial_controller.shrink_amt,
+obj_radial_controller.grav,
+obj_radial_controller.fade,
+obj_radial_controller.fade_amt,
+obj_radial_controller.spin,
+obj_radial_controller.life);
+

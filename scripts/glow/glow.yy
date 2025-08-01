@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glow",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
