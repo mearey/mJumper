@@ -6,10 +6,12 @@ physics_apply_force(x,y,0,-Player.speed/2)
 destroy = false
 
 function flash() {
-	image_alpha = 2	
 	destroy = true
-	Player.multiplier += 1
-	instance_create_depth(x,y,depth,pluscore,{number:points})
+	var sound = choose(_1,_2,_3,_4)
+	audio_play_sound(sound, 1, false)
+	image_alpha = 2
+	Player.multiplier += 1*Player.econ
+	instance_create_depth(x,y,depth,pluscore,{number:points, image_blend,image_blend})
 }
 
 rot = random_range(-speed,speed)

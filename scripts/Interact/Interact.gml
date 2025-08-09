@@ -1,37 +1,37 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Interact_down(){
-	with Button {
-		if hovered {
-			return -1
-		}
-	}
 	if mouse_check_button_pressed(mb_left) {
+		with Button {
+			if hovered {
+				return -1
+			}
+		}
 		return true
 	}
-	return false
+	return 0
 }
 
 function Interact_up(){
-	with Button {
-		if hovered {
-			return -1
-		}
-	}
 	if mouse_check_button_released(mb_left) {
+		with Button {
+			if hovered {
+				return -1
+			}
+		}
 		return true
 	}
-	return false
+	return 0
 }
 
 function Interact_held() {
-	with Button {
-		if hovered {
-			return -1
-		}
-	}
 	if mouse_check_button(mb_left) {
+		with Button {
+			if hovered {
+				return -1
+			}
+		}
 		return true
 	}
-	return false
+	return 0
 }

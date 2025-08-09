@@ -1,6 +1,24 @@
 /// @description Insert description here
 // You can write your code in this editor
+show_debug_message(phy_speed_y)
+if phy_speed_y > 10 {
+	var col = noone
+	with Particle {
+		if abs(y - other.y) < 20 {
+			col	= self
+		}
+	}
+	if col != noone {
+		if !col.destroy {
+			col.flash()
+		}
+	}
+}
+
 if y >= room_height - 10 {
+	if jumps != max_jumps {
+		save()	
+	}
 	jumps=max_jumps
 	multiplier = 1
 }
@@ -23,6 +41,7 @@ if Interact_held(){
 physics_world_update_speed(global.world_speed)
 
 if Interact_up() {
+	arrow_dist = 0
 	var col = noone
 	with Particle {
 		if point_distance(x,y,other.x,other.y) < 25 {
