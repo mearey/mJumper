@@ -64,7 +64,7 @@
   "packageId":"com.mfzz99.spriteexploder",
   "parent":{
     "name":"Extensions",
-    "path":"folders/Extensions.yy",
+    "path":"folders/Animation Curves/Extensions.yy",
   },
   "productId":"F79C97955FD1AF4686EB4EF4EF90F0DB",
   "resourceType":"GMExtension",

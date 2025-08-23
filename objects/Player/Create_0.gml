@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_play_sound(SquareOne,1,true)
+current_sound = choose(c1, c2, c3, c4);
+audio_play_sound(current_sound, 1, false);
 
 ini_open("save")
 max_jumps = ini_read_real("stats", "jumps", max_jumps)

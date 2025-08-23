@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-show_debug_message(phy_speed_y)
+
+//music generation
+if (!audio_is_playing(current_sound)) {
+    // Pick the next random sound
+	var last = current_sound
+	do
+    current_sound = choose(c1, c2, c3, c4);
+	until current_sound != last
+    audio_play_sound(current_sound, 1, false);
+}
+
 if phy_speed_y > 10 {
 	var col = noone
 	with Particle {

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-draw_text_transformed(x,y+20,cost,0.5,0.5,image_angle)	
+draw_number_with_commas(x,y+20,cost,0.5)	
 
 var colors = [c_white, c_lime, c_aqua, c_yellow];
 
