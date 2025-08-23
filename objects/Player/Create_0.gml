@@ -14,6 +14,11 @@ jumps = max_jumps
 
 arrow_dist = 0
 
+// Drag aiming system variables
+aim_start_x = 0
+aim_direction = 0
+is_aiming = false
+
 fixture = physics_fixture_create();
 physics_fixture_set_box_shape(fixture, sprite_width / 2, sprite_height / 2);
 physics_fixture_set_density(fixture, 0.5);
@@ -24,7 +29,7 @@ physics_fixture_bind(fixture, id);
 
 function jump() {
 	
-	var dir = point_direction(x,y,mouse_x, camera_get_view_y(globals.cam))
+	var dir = aim_direction
 	var xdiff = x-mouse_x
 	phy_speed_x = 0
 	phy_speed_y = 0

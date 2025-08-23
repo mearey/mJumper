@@ -43,7 +43,7 @@
   "option_android_icon_xxhdpi":"${options_dir}/android/icons/xxhdpi.png",
   "option_android_icon_xxxhdpi":"${options_dir}/android/icons/xxxhdpi.png",
   "option_android_install_location":0,
-  "option_android_interpolate_pixels":true,
+  "option_android_interpolate_pixels":false,
   "option_android_launchscreen_fill":2,
   "option_android_lint":false,
   "option_android_logcat":"yoyo:V DEBUG:V AndroidRuntime:V",

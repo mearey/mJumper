@@ -34,8 +34,7 @@ else                                  color_index = 3;
 var color  = colors[color_index];
 var points = points_array[color_index];
 
-// Now use these in your instance create:
-if (random(1) < 0.05 * global.world_speed * mult) {
+if (random(1) < 0.05 * (global.world_speed * mult - Player.phy_speed_y/10)) {
     instance_create_depth(
         random_range(8, room_width - 8),
         camera_get_view_y(globals.cam) - 8,

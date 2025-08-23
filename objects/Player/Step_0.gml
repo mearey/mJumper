@@ -33,8 +33,26 @@ if y >= room_height - 10 {
 	multiplier = 1
 }
 
-if Interact_held(){
-	var col = noone
+// Drag aiming system
+if Interact_down() {
+	// Start aiming
+	is_aiming = true
+	aim_start_x = mouse_x
+	aim_direction = 90 // Default upward direction
+}
+
+if is_aiming && Interact_held() {
+	// Calculate direction based on drag distance
+	var drag_distance = mouse_x - aim_start_x
+	var max_drag = 500 // Maximum drag distance for full direction change
+	var direction_change = clamp(-drag_distance / max_drag, -1, 1) * 90 // -180 to 180 degrees
+	
+	// Convert to 0-360 degree range (90 degrees is straight up)
+	aim_direction = 90 + direction_change*1.5
+	if aim_direction < 0 {
+		aim_direction += 360
+	}
+	var col=noone
 	with Particle {
 		if point_distance(x,y,other.x,other.y) < 25 {
 			col	= self
@@ -68,6 +86,7 @@ if Interact_up() {
 		jump()
 		jumps-=1
 	}
+	is_aiming = false
 }
 
 trail(sprite_index,image_angle)
